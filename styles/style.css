@@ -11,8 +11,11 @@
 
 .header {
   height: 100vh;
+  display: flex;
   min-height: 600px;
-  max-height: 756px;
+  min-width: 756px;
+  position: relative;
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
 }
 
@@ -59,7 +62,7 @@
   min-height: 600px;
   min-width: 756px;
   position: relative;
-  background-color: #f2f2f2 ;
+  background-color: #f2f2f2;
 }
 
 .header__title {
@@ -105,7 +108,7 @@
 
 .header__square-pic {
   position: absolute;
-  background-color: #2f80ed ;
+  background-color: #2f80ed;
   width: 568px;
   height: 568px;
   right: 0;
@@ -159,7 +162,6 @@
 }
 
 .two-columns__span-accent {
-  font-weight: bold;
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
