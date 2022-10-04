@@ -1,3 +1,13 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -16,6 +26,7 @@
   max-height: 756px;
   position: relative;
   background-color: #f2f2f2;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
@@ -72,6 +83,10 @@
   text-decoration: none;
 }
 
+ .header__link:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
 
 .header__main-illustration {
   position: absolute;
@@ -91,6 +106,7 @@
   bottom: 0;
   top: 64px;
   z-index: 0;
+  animation: rotation 20s linear infinite;
 }
 
 .description {
@@ -260,6 +276,94 @@
   margin-right: auto;
 }
 
+.techniques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+}
+
+.cards {
+  display: flex;
+  width: 920px;
+  flex-wrap: wrap;
+  padding: 100px 0 0 0;
+  margin: 0;
+  gap: 60px 100px;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 240px;
+  margin: 0;
+}
+
+.cards__image {
+  display: flex;
+  border: #1f1f1f;
+  width: 160px;
+  height: 160px;
+  margin: 0 40px 43px 40px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cards__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 16px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards__description {
+  text-align: center;
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.video {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video__iframes {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto 0 auto;
+  gap: 0 20px;
+  transform: translate(0px, 50px);
+}
+
+.video__iframe {
+  display: flex;
+  flex-wrap: wrap;
+  width: 515px;
+  height: 316px;
+  margin: 0;
+}
+
+.oakley {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding-top: 160px;
+}
+
 .feynman {
   display: flex;
   position: relative;
@@ -272,7 +376,6 @@
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
-  border: 0;
 
 }
 
@@ -305,6 +408,11 @@
   font-weight: normal;
 }
 
+.feynman__link:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
 .kaufman {
   background-color: #1f1f1f;
   position: relative;
@@ -323,6 +431,102 @@
   background-image: url('../images/kaufman-triangle.svg');
   width: 877px;
   height: 877px;
+  animation: rotation 20s linear infinite;
+}
+
+.resources {
+  padding-bottom: 217px;
+  padding-top: 100px;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0 auto;
+  width: 1100px;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.resources__link {
+  display: flex;
+  width: 270px;
+  height: 38px;
+  justify-content: center;
+}
+
+.khan {
+  padding: 105px 0 0 0;
+  display: flex;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto 0 auto;
+  width: 80%;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0 0 50px 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  margin: 0 0 36px 0;
+  width: 790px;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 0 0 10px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  margin: 0 0 68px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+
+}
+
+.khan__book-pic {
+  margin: 0 48px 0 0;
+  height: 620px;
+  width: 608px;
+  overflow: hidden;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
 }
 
 .footer {
