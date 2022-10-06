@@ -3,9 +3,9 @@
   align-items: center;
   color: white;
   text-decoration: none;
+  transition: opacity 0.5s ease;
 }
 
 .footer__column-link:hover {
   opacity: 0.5;
-  transition: opacity 0.5s ease;
 }
